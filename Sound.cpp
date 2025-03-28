@@ -11,8 +11,10 @@ bool Sound::init()
 	std::string swoosh_path{ "audio/swoosh.wav" };
 	std::string wing_path{ "audio/wing.wav" };
 	std::string sound_button{ "sprites/sound.png" };
-	std::string background_path{ "audio/angrybirdstheme.wav" };
+	std::string backgroundMenu_path{ "audio/angrybirdstheme.wav" };
+	std::string backgroundGame_path{ "audio/gameonmusic.wav" };
 	std::string click_path{ "audio/clickPlaySound.wav" };
+	std::string tick_path{ "audio/tickSound.wav" };
 
 	bool success = true;
 
@@ -64,8 +66,15 @@ bool Sound::init()
 			success = false;
 		}
 
-		background = Mix_LoadMUS(background_path.c_str());
-		if (background == NULL)
+		backgroundMenu = Mix_LoadMUS(backgroundMenu_path.c_str());
+		if (backgroundMenu == NULL)
+		{
+			printf("Failed to load wing sound! SDL_mixer Error: %s\n", Mix_GetError());
+			success = false;
+		}
+
+		backgroundGame = Mix_LoadMUS(backgroundGame_path.c_str());
+		if (backgroundGame == NULL)
 		{
 			printf("Failed to load wing sound! SDL_mixer Error: %s\n", Mix_GetError());
 			success = false;
@@ -75,6 +84,13 @@ bool Sound::init()
 		if (click == NULL)
 		{
 			printf("Failed to load click sound! SDL_mixer Error: %s\n", Mix_GetError());
+			success = false;
+		}
+
+		tick = Mix_LoadMUS(tick_path.c_str());
+		if (tick == NULL)
+		{
+			printf("Failed to load tick sound! SDL_mixer Error: %s\n", Mix_GetError());
 			success = false;
 		}
 
@@ -108,9 +124,14 @@ void Sound::free()
 	wing = NULL;
 	Mix_FreeChunk(click);
 	click = NULL;
+	Mix_FreeMusic(tick);
+	tick = NULL;
 
-	Mix_FreeMusic(background);
-	background = NULL;
+	Mix_FreeMusic(backgroundMenu);
+	backgroundMenu = NULL;
+	Mix_FreeMusic(backgroundGame);
+	backgroundGame = NULL;
+
 
 	Mix_Quit();
 }
@@ -155,30 +176,20 @@ void Sound::playWing()
 	}
 }
 
-void Sound::playBackground(bool checkPause)
+void Sound::playBackgroundMenu()
 {
-	//If there is no music playing
 	if (isPlay)
 	{
-		//Play the music
-		Mix_PlayMusic(background, -1);
+		Mix_PlayMusic(backgroundMenu, -1);
 	}
-	//If music is being played
-	//else
-	//{
-	//	//If the music is paused
-	//	if (Mix_PausedMusic() == 1)
-	//	{
-	//		//Resume the music
-	//		Mix_ResumeMusic();
-	//	}
-	//	//If the music is playing
-	//	else
-	//	{
-	//		//Pause the music
-	//		Mix_PauseMusic();
-	//	}
-	//}
+}
+
+void Sound::playBackgroundGame()
+{
+	if (isPlay)
+	{
+		Mix_PlayMusic(backgroundGame, -1);
+	}
 }
 
 void Sound::playClick()
@@ -186,6 +197,14 @@ void Sound::playClick()
 	if (isPlay)
 	{
 		Mix_PlayChannel(-1, click, 0);
+	}
+}
+
+void Sound::playTick()
+{
+	if (isPlay)
+	{
+		Mix_PlayMusic(tick, 0);
 	}
 }
 

@@ -23,6 +23,7 @@ int main(int argc, char* args[])
 	bool isBlue{ false };
 	bool isChuck{ false };
 
+	game.sound.playBackground();
 	while (!game.isQuit())
 	{
 		game.takeInput();
@@ -49,9 +50,11 @@ int main(int argc, char* args[])
 			SDL_Delay(frameDelay - frameTime);
 		}
 	}
+	Mix_HaltMusic();
 
 	while (!game.isQuit() && !isExit)
 	{
+		Mix_ResumeMusic();
 		frameStart = SDL_GetTicks();
 
 		/*game.menu.renderBackground();
@@ -85,6 +88,7 @@ int main(int argc, char* args[])
 				{
 					if (game.checkReplay())
 					{
+						game.sound.playClick();
 						isMenu = false;
 					}
 
@@ -204,6 +208,7 @@ int main(int argc, char* args[])
 				{
 					if (game.checkReplay())
 					{
+						game.sound.playClick();
 						isPause = 0;
 					}
 					else if (game.sound.checkSound())
@@ -212,10 +217,12 @@ int main(int argc, char* args[])
 					}
 					else if (game.changeTheme())
 					{
+						game.sound.playTick();
 						isDark = std::abs(1 - isDark);
 					}
 					else if (game.changeBird(isRed, isBlue, isChuck))
 					{
+						game.sound.playTick();
 						game.bird.init(isRed, isBlue, isChuck);
 					}
 

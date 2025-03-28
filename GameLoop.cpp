@@ -512,8 +512,19 @@ void GameLoop::renderMedal()
 void GameLoop::replay()
 {
 	LTexture image{};
-	image.Load("sprites/replay.png", 1);
-	image.Render((SCREEN_WIDTH - image.getWidth()) / 2, 420);
+	int x{}, y{};
+	SDL_GetMouseState(&x, &y);
+	if (x > (SCREEN_WIDTH - 95) / 2 && x < (SCREEN_WIDTH + 95) / 2 &&
+		y > 420 && y < 420 + 95)
+	{
+		image.Load("sprites/shrinkReplay2.png", 1);
+		image.Render((SCREEN_WIDTH - image.getWidth()) / 2, 425);
+	}
+	else
+	{
+		image.Load("sprites/replay2.png", 1);
+		image.Render((SCREEN_WIDTH - image.getWidth()) / 2, 420);
+	}
 	image.Free();
 }
 
