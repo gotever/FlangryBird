@@ -2,7 +2,7 @@
 
 Menu::Menu()
 {
-	buttonSize = 0;
+	buttonSize = 52;
 }
 
 Menu::~Menu()
@@ -22,7 +22,7 @@ void Menu::takeInputMenu()
 void Menu::renderBackground()
 {
 	LTexture image;
-	image.Load("sprites/backgroundMenu1.png", 1);
+	image.Load("sprites/backgroundMenu2.png", 1);
 	image.Render(0, 0);
 	image.Free();
 }
@@ -39,9 +39,9 @@ void Menu::renderButton()
 {
 	LTexture image;
 	image.Load("sprites/playButton.png", 2);
-	image.Render((SCREEN_WIDTH - image.getWidth()) / 2, 300);
+	image.Render((SCREEN_WIDTH - buttonSize) / 2, 300);
 	image.Load("sprites/exitButton.png", 2);
-	image.Render((SCREEN_WIDTH - image.getWidth()) / 2, 400);
+	image.Render((SCREEN_WIDTH - buttonSize) / 2, 400);
 	image.Free();
 }
 

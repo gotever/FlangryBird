@@ -21,4 +21,7 @@ public:
 	bool exitButtonPressed();
 
 	void free();
+
+private:
+	int buttonSize;
 };
