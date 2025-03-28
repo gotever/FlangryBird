@@ -2,7 +2,10 @@
 
 Menu::Menu()
 {
-	buttonSize = 280;
+	buttonSizeX = 280;
+	buttonSizeY = 159;
+	shrinkButtonSize = 266;
+	playButtonScale = 1;
 }
 
 Menu::~Menu()
@@ -38,8 +41,19 @@ void Menu::renderLogo()
 void Menu::renderButton()
 {
 	LTexture image;
-	image.Load("sprites/playButton2-2.png", 1);
-	image.Render((SCREEN_WIDTH - buttonSize) / 2, 300);
+	int x{}, y{};
+	SDL_GetMouseState(&x, &y);
+	if (x > (SCREEN_WIDTH - buttonSizeX) / 2 && x < (SCREEN_WIDTH - buttonSizeX) / 2 + buttonSizeX &&
+		y > 300 && y < 300 + buttonSizeY)
+	{
+		image.Load("sprites/shrinkPlayButton2-2.png", 1);
+		image.Render((SCREEN_WIDTH - shrinkButtonSize) / 2, 300);
+	}
+	else
+	{
+		image.Load("sprites/playButton2-2.png", 1);
+		image.Render((SCREEN_WIDTH - buttonSizeX) / 2, 300);
+	}
 	/*image.Load("sprites/exitButton.png", 2);
 	image.Render((SCREEN_WIDTH - buttonSize) / 2, 400);*/
 	image.Free();
@@ -49,8 +63,8 @@ bool Menu::playButtonPressed()
 {
 	int x{}, y{};
 	SDL_GetMouseState(&x, &y);
-	if (x > (SCREEN_WIDTH - buttonSize) / 2 && x < (SCREEN_WIDTH - buttonSize) / 2 + buttonSize &&
-		y > 300 && y < 300 + buttonSize)
+	if (x > (SCREEN_WIDTH - buttonSizeX) / 2 && x < (SCREEN_WIDTH - buttonSizeX) / 2 + buttonSizeX &&
+		y > 300 && y < 300 + buttonSizeY)
 	{
 		return true;
 	}

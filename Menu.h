@@ -23,5 +23,8 @@ public:
 	void free();
 
 private:
-	int buttonSize;
+	int buttonSizeX;
+	int buttonSizeY;
+	int shrinkButtonSize;
+	int playButtonScale;
 };
