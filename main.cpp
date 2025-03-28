@@ -25,7 +25,8 @@ int main(int argc, char* args[])
 
 	while (!game.isQuit())
 	{
-		game.menu.takeInputMenu();
+		game.takeInput();
+		game.userInput.type = GameLoop::Input::NONE;
 
 		//game.menu.init();
 		game.menu.renderBackground();
@@ -121,7 +122,7 @@ int main(int argc, char* args[])
 					{
 						game.restart();
 						isMenu = true;
-						game.userInput.type = GameLoop::Input::NONE;
+						game.userInput.type == GameLoop::Input::NONE;
 					}
 
 					game.land.update();
