@@ -20,7 +20,9 @@ public:
 
 	void playWing();
 
-	void playBackground(bool checkPause);
+	void playBackgroundMenu();
+
+	void playBackgroundGame();
 
 	void playClick();
 
@@ -40,7 +42,8 @@ private:
 	Mix_Chunk* swoosh{ NULL };
 	Mix_Chunk* point{ NULL };
 	Mix_Chunk* click{ NULL };
-	Mix_Music* background{ NULL };
+	Mix_Music* backgroundMenu{ NULL };
+	Mix_Music* backgroundGame{ NULL };
 	Mix_Music* tick{ NULL };
 	SDL_Rect mute{};
 	SDL_Rect active{};
