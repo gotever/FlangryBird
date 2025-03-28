@@ -34,7 +34,7 @@ void Menu::renderLogo()
 {
 	LTexture image;
 	image.Load("sprites/logo.png", 1);
-	image.Render((SCREEN_WIDTH - image.getWidth()) / 2, 50);
+	image.Render((SCREEN_WIDTH - image.getWidth()) / 2 + 3, 50);
 	image.Free();
 }
 
