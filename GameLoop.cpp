@@ -9,7 +9,7 @@ GameLoop::GameLoop()
 	land.init();
 	grass.init();
 	sound.init();
-	menu.init();
+	//menu.init();
 	birdType = Type::red;
 }
 
@@ -20,7 +20,7 @@ GameLoop::~GameLoop()
 	land.free();
 	grass.free();
 	sound.free();
-	menu.free();
+	//menu.free();
 	Free();
 	releaseGame();
 }

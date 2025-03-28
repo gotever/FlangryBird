@@ -10,13 +10,13 @@ public:
 
 	void renderBackground();
 
-	bool init();
-
 	void renderLogo();
 
 	void renderButton();
 
-	void checkButton(bool& isExit);
+	bool playButtonPressed();
+
+	bool exitButtonPressed();
 
 	void free();
 

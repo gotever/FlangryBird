@@ -18,20 +18,6 @@ void Menu::renderBackground()
 	image.Free();
 }
 
-bool Menu::init()
-{
-	bool success = true;
-	if (!Load("sprites/menu.png"))
-	{
-		success = false;
-	}
-	else
-	{
-		buttonSize = getWidth() / 2;
-	}
-	return success;
-}
-
 void Menu::renderLogo()
 {
 	LTexture image;
@@ -50,20 +36,30 @@ void Menu::renderButton()
 	image.Free();
 }
 
-void Menu::checkButton(bool& isExit)
+bool Menu::playButtonPressed()
 {
 	int x{}, y{};
 	SDL_GetMouseState(&x, &y);
 	if (x > (SCREEN_WIDTH - buttonSize) / 2 && x < (SCREEN_WIDTH - buttonSize) / 2 + buttonSize &&
 		y > 300 && y < 300 + buttonSize)
 	{
-		isExit = false;
+		return true;
 	}
-	else if (x > (SCREEN_WIDTH - buttonSize) / 2 && x < (SCREEN_WIDTH - buttonSize) / 2 + buttonSize &&
+	
+	return false;
+}
+
+bool Menu::exitButtonPressed()
+{
+	int x{}, y{};
+	SDL_GetMouseState(&x, &y);
+	if (x > (SCREEN_WIDTH - buttonSize) / 2 && x < (SCREEN_WIDTH - buttonSize) / 2 + buttonSize &&
 		y > 400 && y < 400 + buttonSize)
 	{
-		isExit = true;
+		return true;
 	}
+
+	return false;
 }
 
 void Menu::free()
