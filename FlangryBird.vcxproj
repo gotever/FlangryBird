@@ -148,6 +148,7 @@
     <ClCompile Include="Grass.cpp" />
     <ClCompile Include="Land.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Menu.cpp" />
     <ClCompile Include="Pipe.cpp" />
     <ClCompile Include="Sound.cpp" />
     <ClCompile Include="Texture.cpp" />
@@ -156,6 +157,7 @@
     <ClInclude Include="Bird.h" />
     <ClInclude Include="GameLoop.h" />
     <ClInclude Include="Grass.h" />
+    <ClInclude Include="Menu.h" />
     <ClInclude Include="Land.h" />
     <ClInclude Include="Pipe.h" />
     <ClInclude Include="Random.h" />

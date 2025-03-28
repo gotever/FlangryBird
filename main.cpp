@@ -14,6 +14,7 @@ int main(int argc, char* args[])
 	Uint32 frameStart{};
 	int frameTime{};
 	GameLoop game;
+	bool isExit{ false };
 	bool isMenu{ false };
 	bool isPause{ false };
 	bool isSound{ true };
@@ -21,6 +22,17 @@ int main(int argc, char* args[])
 	bool isRed{ true };
 	bool isBlue{ false };
 	bool isChuck{ false };
+
+	while (!isExit)
+	{
+		game.menu.init();
+		game.menu.renderBackground();
+		game.menu.renderMenu();
+		game.menu.renderLogo();
+		game.menu.renderButton();
+		game.menu.checkButton(isExit);
+		game.display();
+	}
 
 	while (!game.isQuit())
 	{
