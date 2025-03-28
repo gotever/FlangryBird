@@ -18,8 +18,6 @@ public:
 
 	void checkButton(bool& isExit);
 
-	void renderMenu();
-
 	void free();
 
 private:

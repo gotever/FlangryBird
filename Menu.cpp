@@ -64,14 +64,6 @@ void Menu::checkButton(bool& isExit)
 	{
 		isExit = true;
 	}
-}	
-
-void Menu::renderMenu()
-{
-	LTexture image;
-	image.Load("sprites/menu.png", 1);
-	image.Render((SCREEN_WIDTH - menuSizeX) / 2, (SCREEN_HEIGHT - menuSizeY) / 2 - menuSizeY / 2);
-	image.Free();
 }
 
 void Menu::free()
