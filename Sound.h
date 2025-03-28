@@ -22,6 +22,8 @@ public:
 
 	void playBackground(bool checkPause);
 
+	void playClick();
+
 	void renderSoundButton();
 
 	bool checkSound();
@@ -35,6 +37,7 @@ private:
 	Mix_Chunk* die{ NULL };
 	Mix_Chunk* swoosh{ NULL };
 	Mix_Chunk* point{ NULL };
+	Mix_Chunk* click{ NULL };
 	Mix_Music* background{ NULL };
 	SDL_Rect mute{};
 	SDL_Rect active{};

@@ -12,6 +12,7 @@ bool Sound::init()
 	std::string wing_path{ "audio/wing.wav" };
 	std::string sound_button{ "sprites/sound.png" };
 	std::string background_path{ "audio/angrybirdstheme.wav" };
+	std::string click_path{ "audio/clickPlaySound.wav" };
 
 	bool success = true;
 
@@ -70,6 +71,13 @@ bool Sound::init()
 			success = false;
 		}
 
+		click = Mix_LoadWAV(click_path.c_str());
+		if (click == NULL)
+		{
+			printf("Failed to load click sound! SDL_mixer Error: %s\n", Mix_GetError());
+			success = false;
+		}
+
 		if (!Load(sound_button)) // load sound button to texture
 		{
 			return false;
@@ -98,6 +106,8 @@ void Sound::free()
 	swoosh = NULL;
 	Mix_FreeChunk(wing);
 	wing = NULL;
+	Mix_FreeChunk(click);
+	click = NULL;
 
 	Mix_FreeMusic(background);
 	background = NULL;
@@ -169,6 +179,14 @@ void Sound::playBackground(bool checkPause)
 	//		Mix_PauseMusic();
 	//	}
 	//}
+}
+
+void Sound::playClick()
+{
+	if (isPlay)
+	{
+		Mix_PlayChannel(-1, click, 0);
+	}
 }
 
 void Sound::renderSoundButton()

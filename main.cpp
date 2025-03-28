@@ -36,6 +36,7 @@ int main(int argc, char* args[])
 			if (game.menu.playButtonPressed())
 			{
 				isExit = false;
+				game.sound.playClick();
 				break;
 			}
 		}
