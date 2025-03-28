@@ -13,6 +13,7 @@ bool Sound::init()
 	std::string sound_button{ "sprites/sound.png" };
 	std::string background_path{ "audio/angrybirdstheme.wav" };
 	std::string click_path{ "audio/clickPlaySound.wav" };
+	std::string tick_path{ "audio/tickSound.wav" };
 
 	bool success = true;
 
@@ -78,6 +79,13 @@ bool Sound::init()
 			success = false;
 		}
 
+		tick = Mix_LoadMUS(tick_path.c_str());
+		if (tick == NULL)
+		{
+			printf("Failed to load tick sound! SDL_mixer Error: %s\n", Mix_GetError());
+			success = false;
+		}
+
 		if (!Load(sound_button)) // load sound button to texture
 		{
 			return false;
@@ -108,6 +116,8 @@ void Sound::free()
 	wing = NULL;
 	Mix_FreeChunk(click);
 	click = NULL;
+	Mix_FreeMusic(tick);
+	tick = NULL;
 
 	Mix_FreeMusic(background);
 	background = NULL;
@@ -186,6 +196,14 @@ void Sound::playClick()
 	if (isPlay)
 	{
 		Mix_PlayChannel(-1, click, 0);
+	}
+}
+
+void Sound::playTick()
+{
+	if (isPlay)
+	{
+		Mix_PlayMusic(tick, 0);
 	}
 }
 

@@ -85,6 +85,7 @@ int main(int argc, char* args[])
 				{
 					if (game.checkReplay())
 					{
+						game.sound.playClick();
 						isMenu = false;
 					}
 
@@ -204,6 +205,7 @@ int main(int argc, char* args[])
 				{
 					if (game.checkReplay())
 					{
+						game.sound.playClick();
 						isPause = 0;
 					}
 					else if (game.sound.checkSound())
@@ -212,10 +214,12 @@ int main(int argc, char* args[])
 					}
 					else if (game.changeTheme())
 					{
+						game.sound.playTick();
 						isDark = std::abs(1 - isDark);
 					}
 					else if (game.changeBird(isRed, isBlue, isChuck))
 					{
+						game.sound.playTick();
 						game.bird.init(isRed, isBlue, isChuck);
 					}
 

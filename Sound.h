@@ -24,6 +24,8 @@ public:
 
 	void playClick();
 
+	void playTick();
+
 	void renderSoundButton();
 
 	bool checkSound();
@@ -39,6 +41,7 @@ private:
 	Mix_Chunk* point{ NULL };
 	Mix_Chunk* click{ NULL };
 	Mix_Music* background{ NULL };
+	Mix_Music* tick{ NULL };
 	SDL_Rect mute{};
 	SDL_Rect active{};
 };
