@@ -87,7 +87,7 @@ bool Sound::init()
 			success = false;
 		}
 
-		tick = Mix_LoadMUS(tick_path.c_str());
+		tick = Mix_LoadWAV(tick_path.c_str());
 		if (tick == NULL)
 		{
 			printf("Failed to load tick sound! SDL_mixer Error: %s\n", Mix_GetError());
@@ -124,7 +124,7 @@ void Sound::free()
 	wing = NULL;
 	Mix_FreeChunk(click);
 	click = NULL;
-	Mix_FreeMusic(tick);
+	Mix_FreeChunk(tick);
 	tick = NULL;
 
 	Mix_FreeMusic(backgroundMenu);
@@ -204,7 +204,7 @@ void Sound::playTick()
 {
 	if (isPlay)
 	{
-		Mix_PlayMusic(tick, 0);
+		Mix_PlayChannel(-1, tick, 0);
 	}
 }
 
