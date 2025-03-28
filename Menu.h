@@ -18,7 +18,7 @@ public:
 
 	bool playButtonPressed();
 
-	bool exitButtonPressed();
+	/*bool exitButtonPressed();*/
 
 	void free();
 

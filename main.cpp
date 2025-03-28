@@ -38,10 +38,6 @@ int main(int argc, char* args[])
 				isExit = false;
 				break;
 			}
-			if (game.menu.exitButtonPressed())
-			{
-				return 0;
-			}
 		}
 		game.display();
 
