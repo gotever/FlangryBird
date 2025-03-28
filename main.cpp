@@ -14,7 +14,7 @@ int main(int argc, char* args[])
 	Uint32 frameStart{};
 	int frameTime{};
 	GameLoop game;
-	bool isExit{ false };
+	bool isExit{ true };
 	bool isMenu{ false };
 	bool isPause{ false };
 	bool isSound{ true };
@@ -23,9 +23,9 @@ int main(int argc, char* args[])
 	bool isBlue{ false };
 	bool isChuck{ false };
 
-	while (!isExit)
+	while (!game.isQuit())
 	{
-		frameStart = SDL_GetTicks();
+		game.menu.takeInputMenu();
 
 		//game.menu.init();
 		game.menu.renderBackground();
@@ -121,7 +121,7 @@ int main(int argc, char* args[])
 					{
 						game.restart();
 						isMenu = true;
-						game.userInput.type == GameLoop::Input::NONE;
+						game.userInput.type = GameLoop::Input::NONE;
 					}
 
 					game.land.update();

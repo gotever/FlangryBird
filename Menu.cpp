@@ -10,6 +10,15 @@ Menu::~Menu()
 	free();
 }
 
+void Menu::takeInputMenu()
+{
+	SDL_PollEvent(&event);
+	if (event.type == SDL_QUIT)
+	{
+		quit = true;
+	}
+}
+
 void Menu::renderBackground()
 {
 	LTexture image;

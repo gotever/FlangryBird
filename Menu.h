@@ -8,6 +8,8 @@ public:
 
 	~Menu();
 
+	void takeInputMenu();
+
 	void renderBackground();
 
 	void renderLogo();
