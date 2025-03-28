@@ -14,6 +14,7 @@ int main(int argc, char* args[])
 	Uint32 frameStart{};
 	int frameTime{};
 	GameLoop game;
+	bool isExit{ true };
 	bool isMenu{ false };
 	bool isPause{ false };
 	bool isSound{ true };
@@ -24,7 +25,48 @@ int main(int argc, char* args[])
 
 	while (!game.isQuit())
 	{
+		game.takeInput();
+		game.userInput.type = GameLoop::Input::NONE;
+
+		//game.menu.init();
+		game.menu.renderBackground();
+		game.menu.renderLogo();
+		game.menu.renderButton();
+		if (game.menu.playButtonPressed())
+		{
+			isExit = false;
+			break;
+		}
+		if (game.menu.exitButtonPressed())
+		{
+			return 0;
+		}
+		game.display();
+
+		//Limit FPS
+		frameTime = SDL_GetTicks() - frameStart;
+		if (frameDelay > frameTime)
+		{
+			SDL_Delay(frameDelay - frameTime);
+		}
+	}
+
+	while (!game.isQuit() && !isExit)
+	{
 		frameStart = SDL_GetTicks();
+
+		/*game.menu.renderBackground();
+		game.menu.renderLogo();
+		game.menu.renderButton();
+		if (game.menu.playButtonPressed())
+		{
+			isExit = false;
+		}
+		if (game.menu.exitButtonPressed())
+		{
+			break;
+		}
+		game.display();*/
 
 		if (game.isDie())
 		{

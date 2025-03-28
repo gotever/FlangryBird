@@ -5,6 +5,7 @@
 #include "Pipe.h"
 #include "Sound.h"
 #include "Texture.h"
+#include "Menu.h"
 #include "Random.h"
 #include <fstream>
 #include <sstream>
@@ -104,6 +105,7 @@ public:
 	Sound sound{};
 	Land land{};
 	Grass grass{};
+	Menu menu{};
 	int birdType{};
 
 private:
