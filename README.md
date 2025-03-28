@@ -1,6 +1,6 @@
-# FlangryBirds 🐦🔥
+# FlangryBird 🐦🔥
 
-**Flangry Birds** is a fast-paced 2D game that uses the **Flappy Bird** engine with **Angry Birds**-inspired graphics. Navigate treacherous obstacles, flap your way through challenges, and master precise movement!
+**Flangry Bird** is a fast-paced 2D game that uses the **Flappy Bird** engine with **Angry Birds**-inspired graphics. Navigate treacherous obstacles, flap your way through challenges, and master precise movement!
 
 ## 🎮 Features
 - **Flappy Bird mechanics** – Tap to flap and stay airborne.
