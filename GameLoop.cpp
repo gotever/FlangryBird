@@ -327,14 +327,14 @@ void GameLoop::renderLand()
 void GameLoop::resume()
 {
 	LTexture image{};
-	image.Load("sprites/resume.png", 1);
+	image.Load("sprites/resume2.png", 0.8);
 	image.Render(SCREEN_WIDTH - 50, 20);
 	image.Free();
 }
 void GameLoop::pause()
 {
 	LTexture image{};
-	image.Load("sprites/pause.png", 0.8);
+	image.Load("sprites/pause2.png", 0.8);
 	image.Render(SCREEN_WIDTH - 50, 20);
 	image.Free();
 }

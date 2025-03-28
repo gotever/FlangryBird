@@ -26,20 +26,19 @@ int main(int argc, char* args[])
 	while (!game.isQuit())
 	{
 		game.takeInput();
-		game.userInput.type = GameLoop::Input::NONE;
 
 		//game.menu.init();
 		game.menu.renderBackground();
 		game.menu.renderLogo();
 		game.menu.renderButton();
-		if (game.menu.playButtonPressed())
+		if (game.userInput.type == GameLoop::Input::PLAY)
 		{
-			isExit = false;
-			break;
-		}
-		if (game.menu.exitButtonPressed())
-		{
-			return 0;
+			if (game.menu.playButtonPressed())
+			{
+				isExit = false;
+				game.sound.playClick();
+				break;
+			}
 		}
 		game.display();
 
@@ -86,7 +85,7 @@ int main(int argc, char* args[])
 				{
 					if (game.checkReplay())
 					{
-						isMenu = 0;
+						isMenu = false;
 					}
 
 					game.userInput.type = GameLoop::Input::NONE;
@@ -122,7 +121,7 @@ int main(int argc, char* args[])
 					{
 						game.restart();
 						isMenu = true;
-						game.userInput.type == GameLoop::Input::NONE;
+						game.userInput.type = GameLoop::Input::NONE;
 					}
 
 					game.land.update();

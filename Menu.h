@@ -18,12 +18,13 @@ public:
 
 	bool playButtonPressed();
 
-	bool exitButtonPressed();
+	/*bool exitButtonPressed();*/
 
 	void free();
 
 private:
-	int buttonSize{};
-	int menuSizeX{};
-	int menuSizeY{};
+	int buttonSizeX;
+	int buttonSizeY;
+	int shrinkButtonSize;
+	int playButtonScale;
 };
