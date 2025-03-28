@@ -165,7 +165,54 @@
     <ClInclude Include="Texture.h" />
   </ItemGroup>
   <ItemGroup>
+    <Image Include="sprites\angryfacesv2-2.png" />
+    <Image Include="sprites\background-day.png" />
+    <Image Include="sprites\background-night.png" />
+    <Image Include="sprites\backgroundMenu2.png" />
+    <Image Include="sprites\base.png" />
+    <Image Include="sprites\blue-bird.png" />
+    <Image Include="sprites\chuck-bird.png" />
     <Image Include="sprites\flangrybirdsicon.ico" />
+    <Image Include="sprites\GameOverWord.png" />
+    <Image Include="sprites\grass.png" />
+    <Image Include="sprites\logo.png" />
+    <Image Include="sprites\menuflangry.png" />
+    <Image Include="sprites\messagev6-2.png" />
+    <Image Include="sprites\nextLeft.png" />
+    <Image Include="sprites\nextRight.png" />
+    <Image Include="sprites\pause2.png" />
+    <Image Include="sprites\pauseTab.png" />
+    <Image Include="sprites\pauseWord.png" />
+    <Image Include="sprites\pauseWordv2.png" />
+    <Image Include="sprites\pipe.png" />
+    <Image Include="sprites\playButton2-2.png" />
+    <Image Include="sprites\red-bird.png" />
+    <Image Include="sprites\replay2.png" />
+    <Image Include="sprites\resume2.png" />
+    <Image Include="sprites\shrinkPlayButton2-2.png" />
+    <Image Include="sprites\shrinkReplay2.png" />
+    <Image Include="sprites\sound.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Media Include="audio\angrybirdstheme.wav" />
+    <Media Include="audio\clickPlaySound.wav" />
+    <Media Include="audio\die.wav" />
+    <Media Include="audio\gameonmusic.wav" />
+    <Media Include="audio\hit.wav" />
+    <Media Include="audio\point.wav" />
+    <Media Include="audio\swoosh.wav" />
+    <Media Include="audio\tickSound.wav" />
+    <Media Include="audio\wing.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="audio\die.ogg" />
+    <None Include="audio\hit.ogg" />
+    <None Include="audio\point.ogg" />
+    <None Include="audio\swoosh.ogg" />
+    <None Include="audio\wing.ogg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="data\bestScore.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

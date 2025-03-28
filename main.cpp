@@ -23,7 +23,7 @@ int main(int argc, char* args[])
 	bool isBlue{ false };
 	bool isChuck{ false };
 
-	game.sound.playBackground();
+	game.sound.playBackgroundMenu();
 	while (!game.isQuit())
 	{
 		game.takeInput();
@@ -54,7 +54,7 @@ int main(int argc, char* args[])
 
 	while (!game.isQuit() && !isExit)
 	{
-		Mix_ResumeMusic();
+		//Mix_ResumeMusic();
 		frameStart = SDL_GetTicks();
 
 		/*game.menu.renderBackground();
@@ -72,6 +72,7 @@ int main(int argc, char* args[])
 
 		if (game.isDie())
 		{
+			//Mix_HaltMusic();
 			if (isMenu)
 			{
 				game.sound.playHit();

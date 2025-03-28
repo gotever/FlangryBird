@@ -13,6 +13,15 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Resource Files\sprites">
+      <UniqueIdentifier>{4aa3776c-ee55-4c46-99d1-b753d6be0f29}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\audio">
+      <UniqueIdentifier>{43f80e82-be35-4011-b4b9-7ebaee090bef}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\data">
+      <UniqueIdentifier>{a199141c-84b9-4c2c-8c05-b3a1374f2fff}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -73,8 +82,137 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <Image Include="sprites\flangrybirdsicon.ico">
-      <Filter>Resource Files</Filter>
+    <Image Include="sprites\angryfacesv2-2.png">
+      <Filter>Resource Files\sprites</Filter>
     </Image>
+    <Image Include="sprites\background-day.png">
+      <Filter>Resource Files\sprites</Filter>
+    </Image>
+    <Image Include="sprites\backgroundMenu2.png">
+      <Filter>Resource Files\sprites</Filter>
+    </Image>
+    <Image Include="sprites\background-night.png">
+      <Filter>Resource Files\sprites</Filter>
+    </Image>
+    <Image Include="sprites\base.png">
+      <Filter>Resource Files\sprites</Filter>
+    </Image>
+    <Image Include="sprites\blue-bird.png">
+      <Filter>Resource Files\sprites</Filter>
+    </Image>
+    <Image Include="sprites\chuck-bird.png">
+      <Filter>Resource Files\sprites</Filter>
+    </Image>
+    <Image Include="sprites\flangrybirdsicon.ico">
+      <Filter>Resource Files\sprites</Filter>
+    </Image>
+    <Image Include="sprites\GameOverWord.png">
+      <Filter>Resource Files\sprites</Filter>
+    </Image>
+    <Image Include="sprites\grass.png">
+      <Filter>Resource Files\sprites</Filter>
+    </Image>
+    <Image Include="sprites\logo.png">
+      <Filter>Resource Files\sprites</Filter>
+    </Image>
+    <Image Include="sprites\menuflangry.png">
+      <Filter>Resource Files\sprites</Filter>
+    </Image>
+    <Image Include="sprites\messagev6-2.png">
+      <Filter>Resource Files\sprites</Filter>
+    </Image>
+    <Image Include="sprites\nextLeft.png">
+      <Filter>Resource Files\sprites</Filter>
+    </Image>
+    <Image Include="sprites\nextRight.png">
+      <Filter>Resource Files\sprites</Filter>
+    </Image>
+    <Image Include="sprites\pause2.png">
+      <Filter>Resource Files\sprites</Filter>
+    </Image>
+    <Image Include="sprites\pauseTab.png">
+      <Filter>Resource Files\sprites</Filter>
+    </Image>
+    <Image Include="sprites\pauseWord.png">
+      <Filter>Resource Files\sprites</Filter>
+    </Image>
+    <Image Include="sprites\pauseWordv2.png">
+      <Filter>Resource Files\sprites</Filter>
+    </Image>
+    <Image Include="sprites\pipe.png">
+      <Filter>Resource Files\sprites</Filter>
+    </Image>
+    <Image Include="sprites\playButton2-2.png">
+      <Filter>Resource Files\sprites</Filter>
+    </Image>
+    <Image Include="sprites\red-bird.png">
+      <Filter>Resource Files\sprites</Filter>
+    </Image>
+    <Image Include="sprites\replay2.png">
+      <Filter>Resource Files\sprites</Filter>
+    </Image>
+    <Image Include="sprites\resume2.png">
+      <Filter>Resource Files\sprites</Filter>
+    </Image>
+    <Image Include="sprites\shrinkPlayButton2-2.png">
+      <Filter>Resource Files\sprites</Filter>
+    </Image>
+    <Image Include="sprites\shrinkReplay2.png">
+      <Filter>Resource Files\sprites</Filter>
+    </Image>
+    <Image Include="sprites\sound.png">
+      <Filter>Resource Files\sprites</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <Media Include="audio\angrybirdstheme.wav">
+      <Filter>Resource Files\audio</Filter>
+    </Media>
+    <Media Include="audio\clickPlaySound.wav">
+      <Filter>Resource Files\audio</Filter>
+    </Media>
+    <Media Include="audio\die.wav">
+      <Filter>Resource Files\audio</Filter>
+    </Media>
+    <Media Include="audio\gameonmusic.wav">
+      <Filter>Resource Files\audio</Filter>
+    </Media>
+    <Media Include="audio\hit.wav">
+      <Filter>Resource Files\audio</Filter>
+    </Media>
+    <Media Include="audio\point.wav">
+      <Filter>Resource Files\audio</Filter>
+    </Media>
+    <Media Include="audio\swoosh.wav">
+      <Filter>Resource Files\audio</Filter>
+    </Media>
+    <Media Include="audio\tickSound.wav">
+      <Filter>Resource Files\audio</Filter>
+    </Media>
+    <Media Include="audio\wing.wav">
+      <Filter>Resource Files\audio</Filter>
+    </Media>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="audio\die.ogg">
+      <Filter>Resource Files\audio</Filter>
+    </None>
+    <None Include="audio\hit.ogg">
+      <Filter>Resource Files\audio</Filter>
+    </None>
+    <None Include="audio\point.ogg">
+      <Filter>Resource Files\audio</Filter>
+    </None>
+    <None Include="audio\swoosh.ogg">
+      <Filter>Resource Files\audio</Filter>
+    </None>
+    <None Include="audio\wing.ogg">
+      <Filter>Resource Files\audio</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="data\bestScore.txt">
+      <Filter>Resource Files\data</Filter>
+    </Text>
   </ItemGroup>
 </Project>
