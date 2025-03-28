@@ -22,7 +22,7 @@ void Menu::takeInputMenu()
 void Menu::renderBackground()
 {
 	LTexture image;
-	image.Load("sprites/backgroundMenu.png", 1);
+	image.Load("sprites/backgroundMenu1.png", 1);
 	image.Render(0, 0);
 	image.Free();
 }
@@ -31,17 +31,17 @@ void Menu::renderLogo()
 {
 	LTexture image;
 	image.Load("sprites/logo.png", 1);
-	image.Render((SCREEN_WIDTH - image.getWidth()) / 2, 80);
+	image.Render((SCREEN_WIDTH - image.getWidth()) / 2, 50);
 	image.Free();
 }
 
 void Menu::renderButton()
 {
 	LTexture image;
-	image.Load("sprites/playButton.png", 1);
-	image.Render((SCREEN_WIDTH - buttonSize) / 2, 300);
-	image.Load("sprites/exitButton.png", 1);
-	image.Render((SCREEN_WIDTH - buttonSize) / 2, 400);
+	image.Load("sprites/playButton.png", 2);
+	image.Render((SCREEN_WIDTH - image.getWidth()) / 2, 300);
+	image.Load("sprites/exitButton.png", 2);
+	image.Render((SCREEN_WIDTH - image.getWidth()) / 2, 400);
 	image.Free();
 }
 
