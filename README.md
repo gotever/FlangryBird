@@ -22,9 +22,9 @@
 - **Custom Sprites & Assets** – Handcrafted pixel art and animations inspired by Angry Birds.
 
 ## 🏆 Credits
-Developed by Phan Huy Anh 🚀
-Inspired by Nguyen Ha Dong's Flappy Bird 🕊️ (mechanics) and Rovio's Angry Birds 🐦 (graphics).
-Consulted from [DuCLeK65t](https://github.com/DuCLeK65t), [Ducanger](https://github.com/Ducanger), [askarihriz](https://github.com/askarihriz), and Chat-GPT (hell yeah)
+  Developed by Phan Huy Anh 🚀.
+  Inspired by Nguyen Ha Dong's Flappy Bird 🕊️ (mechanics) and Rovio's Angry Birds 🐦 (graphics).
+  Consulted from [DuCLeK65t](https://github.com/DuCLeK65t), [Ducanger](https://github.com/Ducanger), [askarihriz](https://github.com/askarihriz), and Chat-GPT (hell yeah).
 
 ---
 
