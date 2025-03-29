@@ -12,7 +12,6 @@ bool Sound::init()
 	std::string wing_path{ "audio/wing.wav" };
 	std::string sound_button{ "sprites/sound.png" };
 	std::string backgroundMenu_path{ "audio/angrybirdstheme.wav" };
-	std::string backgroundGame_path{ "audio/gameonmusic.wav" };
 	std::string click_path{ "audio/clickPlaySound.wav" };
 	std::string tick_path{ "audio/tickSound.wav" };
 
@@ -73,13 +72,6 @@ bool Sound::init()
 			success = false;
 		}
 
-		backgroundGame = Mix_LoadMUS(backgroundGame_path.c_str());
-		if (backgroundGame == NULL)
-		{
-			printf("Failed to load wing sound! SDL_mixer Error: %s\n", Mix_GetError());
-			success = false;
-		}
-
 		click = Mix_LoadWAV(click_path.c_str());
 		if (click == NULL)
 		{
@@ -129,8 +121,6 @@ void Sound::free()
 
 	Mix_FreeMusic(backgroundMenu);
 	backgroundMenu = NULL;
-	Mix_FreeMusic(backgroundGame);
-	backgroundGame = NULL;
 
 
 	Mix_Quit();
@@ -181,14 +171,6 @@ void Sound::playBackgroundMenu()
 	if (isPlay)
 	{
 		Mix_PlayMusic(backgroundMenu, -1);
-	}
-}
-
-void Sound::playBackgroundGame()
-{
-	if (isPlay)
-	{
-		Mix_PlayMusic(backgroundGame, -1);
 	}
 }
 

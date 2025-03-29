@@ -22,8 +22,6 @@ public:
 
 	void playBackgroundMenu();
 
-	void playBackgroundGame();
-
 	void playClick();
 
 	void playTick();
@@ -44,7 +42,6 @@ private:
 	Mix_Chunk* click{ NULL };
 	Mix_Chunk* tick{ NULL };
 	Mix_Music* backgroundMenu{ NULL };
-	Mix_Music* backgroundGame{ NULL };
 	SDL_Rect mute{};
 	SDL_Rect active{};
 };

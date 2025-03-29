@@ -50,29 +50,14 @@ int main(int argc, char* args[])
 			SDL_Delay(frameDelay - frameTime);
 		}
 	}
-	Mix_HaltMusic();
+	Mix_PauseMusic();
 
 	while (!game.isQuit() && !isExit)
 	{
-		//Mix_ResumeMusic();
 		frameStart = SDL_GetTicks();
-
-		/*game.menu.renderBackground();
-		game.menu.renderLogo();
-		game.menu.renderButton();
-		if (game.menu.playButtonPressed())
-		{
-			isExit = false;
-		}
-		if (game.menu.exitButtonPressed())
-		{
-			break;
-		}
-		game.display();*/
 
 		if (game.isDie())
 		{
-			//Mix_HaltMusic();
 			if (isMenu)
 			{
 				game.sound.playHit();
@@ -110,7 +95,6 @@ int main(int argc, char* args[])
 					game.bird.render();
 					game.bird.fall();
 					game.renderGameOver();
-					//game.renderMedal();
 					game.renderScoreSmall();
 					game.renderBestScore();
 					game.replay();
