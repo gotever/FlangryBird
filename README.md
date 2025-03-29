@@ -19,7 +19,7 @@
 
 ## 🛠️ Technologies Used
 - **C++ & SDL2** – Engine and game development framework.
-- **Custom Sprites & Assets** – Handcrafted pixel art and animations inspired by Angry Birds.
+- **Images sourced from the internet** – Some images used in the game were found online.
 
 ## 🏆 Credits
   Developed by Phan Huy Anh 🚀. <br>
