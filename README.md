@@ -2,6 +2,8 @@
 
 **Flangry Bird** is a fast-paced 2D game that uses the **Flappy Bird** engine with **Angry Birds**-inspired graphics. Navigate treacherous obstacles, flap your way through challenges, and master precise movement!
 
+**Video demo**: https://youtu.be/wwz-LllB4Fc?si=39IioCBzN2ImrT5U
+
 ## 🎮 Features
 - **Flappy Bird mechanics** – Tap to flap and stay airborne.
 - **Dynamic scoring system** – Earn points based on accuracy and distance traveled.
