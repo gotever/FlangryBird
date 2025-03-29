@@ -54,8 +54,6 @@ void Menu::renderButton()
 		image.Load("sprites/playButton2-2.png", 1);
 		image.Render((SCREEN_WIDTH - buttonSizeX) / 2, 300);
 	}
-	/*image.Load("sprites/exitButton.png", 2);
-	image.Render((SCREEN_WIDTH - buttonSize) / 2, 400);*/
 	image.Free();
 }
 
@@ -71,19 +69,6 @@ bool Menu::playButtonPressed()
 	
 	return false;
 }
-
-//bool Menu::exitButtonPressed()
-//{
-//	int x{}, y{};
-//	SDL_GetMouseState(&x, &y);
-//	if (x > (SCREEN_WIDTH - buttonSize) / 2 && x < (SCREEN_WIDTH - buttonSize) / 2 + buttonSize &&
-//		y > 400 && y < 400 + buttonSize)
-//	{
-//		return true;
-//	}
-//
-//	return false;
-//}
 
 void Menu::free()
 {

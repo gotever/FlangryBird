@@ -9,7 +9,6 @@ GameLoop::GameLoop()
 	land.init();
 	grass.init();
 	sound.init();
-	//menu.init();
 	birdType = Type::red;
 }
 
@@ -20,7 +19,6 @@ GameLoop::~GameLoop()
 	land.free();
 	grass.free();
 	sound.free();
-	//menu.free();
 	Free();
 	releaseGame();
 }
@@ -481,31 +479,6 @@ void GameLoop::renderGameOver()
 	image.Render((SCREEN_WIDTH - image.getWidth()) / 2, 180);
 	image.Load("sprites/angryfacesv2-2.png", 1);
 	image.Render((SCREEN_WIDTH - image.getWidth()) / 2, 135);
-	image.Free();
-}
-
-void GameLoop::renderMedal()
-{
-	LTexture image{};
-
-	if (score <= 20)
-	{
-		image.Load("sprites/medal_bronze.png", 1.75);
-	}
-	if (score > 20 && score <= 50)
-	{
-		image.Load("sprites/medal_silver.png", 1.75);
-	}
-	else if (score > 50 && score <= 100)
-	{
-		image.Load("sprites/medal_gold.png", 1.75);
-	}
-	else if (score > 100)
-	{
-		image.Load("sprites/medal_platinum.png", 1.75);
-	}
-	image.Render(82, 275);
-
 	image.Free();
 }
 

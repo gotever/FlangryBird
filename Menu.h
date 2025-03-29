@@ -18,8 +18,6 @@ public:
 
 	bool playButtonPressed();
 
-	/*bool exitButtonPressed();*/
-
 	void free();
 
 private:
