@@ -24,6 +24,7 @@
 ## 🏆 Credits
 Developed by Phan Huy Anh 🚀
 Inspired by Nguyen Ha Dong's Flappy Bird 🕊️ (mechanics) and Rovio's Angry Birds 🐦 (graphics).
+Consulted from @DuCLeK65t, @Ducanger, @askarihriz, and Chat-GPT (hell yeah)
 
 ---
 
